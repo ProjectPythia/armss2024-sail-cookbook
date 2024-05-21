@@ -16,6 +16,7 @@ Objective: To compare the SAIL campaign measurements and WRF model simulation in
 ## Data 
 SP2 measurement - black carbon
 SMPS - total number concentration&size distribution
+Lidar - dust concentration 
 HYSPLIT-back trajectories
 SEBS measurement - surface shortwave radiation fluxes
 MET measurement - surface temperature; precipitation
