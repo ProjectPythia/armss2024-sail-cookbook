@@ -9,8 +9,19 @@
 This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., _working with radar data in Python_)
 
 ## Motivation
+Background: WRF does not implement aerosols in simulation and therefore could mispredict the snow radiation fluxes after dust events.
 
-(Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
+Objective: To compare the SAIL campaign measurements and WRF model simulation in terms the snow darkening effect of black carbon/aerosols
+
+## Data 
+SP2 measurement - black carbon
+SMPS - total number concentration&size distribution
+HYSPLIT-back trajectories
+SEBS measurement - surface shortwave radiation fluxes
+MET measurement - surface temperature; precipitation
+WRF simulation - surface radiation fluxes; snow depth (?); surface temperature
+AOP PSAP - aerosol optical properties (AAE, AE, SSA, Beta Abs, Beta Sca)
+Weather camera - snow cover status
 
 ## Authors
 
