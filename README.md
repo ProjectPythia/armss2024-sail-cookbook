@@ -14,6 +14,7 @@ Background: WRF does not implement aerosols in simulation and therefore could mi
 Objective: To compare the SAIL campaign measurements and WRF model simulation in terms the snow darkening effect of black carbon/aerosols
 
 ## Data 
+<<<<<<< HEAD
 SP2 measurement - black carbon
 SMPS - total number concentration&size distribution
 Lidar - dust concentration 
@@ -23,6 +24,16 @@ MET measurement - surface temperature; precipitation
 WRF simulation - surface radiation fluxes; snow depth (?); surface temperature
 AOP PSAP - aerosol optical properties (AAE, AE, SSA, Beta Abs, Beta Sca)
 Weather camera - snow cover status
+=======
+SP2 measurement - black carbon  
+SMPS - total number concentration&size distribution   
+HYSPLIT-back trajectories   
+SEBS measurement - surface shortwave radiation fluxes   
+MET measurement - surface temperature; precipitation   
+WRF simulation - surface radiation fluxes; snow depth (?); surface temperature   
+AOP PSAP - aerosol optical properties (AAE, AE, SSA, Beta Abs, Beta Sca)   
+Weather camera - snow cover status    
+>>>>>>> c0992e6a75797a4aabdc81d22a8a6876cdd02cc5
 
 ## Authors
 
