@@ -1,0 +1,1690 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Project Pythia Cookbook Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-pythia-theme.min.css?v=e502140d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d0efeab3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-T52X8HNYE8"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-T52X8HNYE8');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-T52X8HNYE8');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/wrfdwnl';</script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="23 May 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <div class="pst-scroll-pixel-helper"></div>
+    <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+   
+
+<a class="navbar-brand logo" href="https://projectpythia.org">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Project Pythia Cookbook Template - Home"/>
+    <script>document.write(`<img src="../_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Project Pythia Cookbook Template - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+        
+        
+        
+          
+        
+        <div class="bd-sidebar-primary bd-sidebar">
+          
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    (Replace_with_your_title) Cookbook
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preamble</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="how-to-cite.html">How to Cite This Cookbook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebook-template.html">Project Pythia Notebook Template</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+        </div>
+
+        
+        <main id="main-content" class="bd-main" role="main">
+          
+
+            <div class="bd-content">
+
+              <div class="bd-article-container">
+
+                
+                  
+                  
+<div id="searchbox"></div>
+                  <article class="bd-article">
+                    
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Function to download files</span>
+<span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">local_dir</span><span class="p">):</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">local_dir</span><span class="p">,</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloaded </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># URL of the website to scrape</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://iop.archive.arm.gov/arm-iop-file/2021/guc/sail/xu-wrf/wrf_east_river_simulation_2023_subset/SAIL_WRF_2023/6hrly/&quot;</span>
+
+<span class="c1"># Local directory to save files</span>
+<span class="n">local_dir</span> <span class="o">=</span> <span class="s2">&quot;./downloaded_files&quot;</span>
+
+<span class="c1"># Create directory if it doesn&#39;t exist</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">local_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">local_dir</span><span class="p">)</span>
+
+<span class="c1"># Send a GET request to the URL</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Parse the HTML content</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+<span class="c1"># Find all links in the page</span>
+<span class="n">links</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+
+<span class="c1"># Loop through all links and download files</span>
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+    <span class="n">href</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;00&#39;</span><span class="p">):</span>  <span class="c1"># Change the extension according to the file type you want to download</span>
+        <span class="n">file_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">href</span>
+        <span class="n">download_file</span><span class="p">(</span><span class="n">file_url</span><span class="p">,</span> <span class="n">local_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded ./downloaded_files/wrfout_d03_2022-12-31_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2022-12-31_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2022-12-31_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-01_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-01_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-01_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-01_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-02_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-02_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-02_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-02_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-03_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-03_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-03_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-03_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-04_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-04_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-04_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-04_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-05_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-05_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-05_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-05_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-06_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-06_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-06_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-06_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-07_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-07_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-07_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-07_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-08_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-08_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-08_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-08_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-09_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-09_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-09_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-09_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-10_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-10_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-10_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-10_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-11_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-11_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-11_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-11_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-12_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-12_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-12_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-12_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-13_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-13_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-13_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-13_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-14_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-14_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-14_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-14_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-15_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-15_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-15_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-15_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-16_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-16_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-16_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-16_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-17_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-17_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-17_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-17_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-18_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-18_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-18_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-18_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-19_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-19_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-19_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-19_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-20_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-20_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-20_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-20_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-21_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-21_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-21_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-21_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-22_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-22_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-22_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-22_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-23_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-23_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-23_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-23_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-24_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-24_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-24_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-24_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-25_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-25_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-25_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-25_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-26_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-26_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-26_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-26_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-27_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-27_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-27_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-27_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-28_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-28_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-28_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-28_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-29_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-29_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-29_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-29_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-30_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-30_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-30_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-30_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-31_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-31_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-31_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-01-31_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-01_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-01_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-01_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-01_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-02_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-02_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-02_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-02_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-03_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-03_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-03_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-03_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-04_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-04_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-04_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-04_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-05_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-05_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-05_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-05_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-06_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-06_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-06_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-06_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-07_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-07_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-07_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-07_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-08_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-08_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-08_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-08_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-09_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-09_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-09_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-09_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-10_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-10_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-10_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-10_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-11_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-11_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-11_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-11_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-12_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-12_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-12_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-12_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-13_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-13_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-13_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-13_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-14_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-14_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-14_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-14_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-15_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-15_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-15_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-15_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-16_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-16_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-16_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-16_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-17_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-17_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-17_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-17_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-18_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-18_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-18_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-18_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-19_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-19_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-19_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-19_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-20_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-20_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-20_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-20_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-21_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-21_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-21_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-21_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-22_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-22_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-22_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-22_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-23_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-23_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-23_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-23_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-24_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-24_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-24_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-24_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-25_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-25_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-25_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-25_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-26_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-26_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-26_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-26_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-27_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-27_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-27_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-27_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-28_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-28_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-28_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-02-28_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-01_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-01_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-01_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-01_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-02_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-02_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-02_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-02_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-03_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-03_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-03_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-03_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-04_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-04_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-04_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-04_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-05_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-05_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-05_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-05_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-06_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-06_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-06_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-06_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-07_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-07_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-07_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-07_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-08_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-08_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-08_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-08_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-09_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-09_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-09_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-09_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-10_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-10_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-10_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-10_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-11_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-11_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-11_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-12_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-12_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-12_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-13_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-13_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-13_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-14_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-14_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-14_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-15_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-15_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-15_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-16_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-16_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-16_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-17_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-17_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-17_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-18_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-18_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-19_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-19_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-19_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-19_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-20_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-20_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-20_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-20_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-21_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-21_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-21_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-22_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-22_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-23_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-23_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-23_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-23_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-24_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-24_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-24_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-24_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-25_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-25_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-25_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-25_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-26_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-26_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-26_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-26_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-27_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-27_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-27_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-27_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-28_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-28_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-28_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-28_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-29_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-29_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-29_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-29_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-30_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-30_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-30_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-30_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-31_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-31_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-31_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-03-31_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-01_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-01_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-01_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-01_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-02_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-02_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-02_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-02_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-03_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-03_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-03_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-03_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-04_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-04_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-04_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-04_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-05_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-05_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-05_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-05_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-06_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-06_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-06_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-06_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-07_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-07_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-07_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-07_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-08_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-08_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-08_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-08_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-09_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-09_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-09_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-09_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-10_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-10_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-10_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-10_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-11_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-11_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-11_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-11_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-12_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-12_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-12_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-12_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-13_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-13_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-13_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-13_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-14_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-14_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-14_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-14_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-15_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-15_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-15_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-15_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-16_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-16_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-16_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-16_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-17_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-17_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-17_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-17_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-18_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-18_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-18_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-18_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-19_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-19_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-19_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-19_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-20_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-20_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-20_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-20_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-21_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-21_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-21_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-21_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-22_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-22_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-22_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-22_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-23_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-23_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-23_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-23_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-24_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-24_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-24_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-24_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-25_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-25_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-25_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-25_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-26_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-26_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-26_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-26_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-27_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-27_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-27_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-27_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-28_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-28_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-28_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-28_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-29_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-29_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-29_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-29_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-30_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-30_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-30_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-04-30_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-01_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-01_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-01_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-01_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-02_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-02_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-02_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-02_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-03_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-03_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-03_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-03_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-04_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-04_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-04_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-04_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-05_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-05_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-05_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-05_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-06_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-06_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-06_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-06_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-07_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-07_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-07_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-07_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-08_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-08_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-08_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-08_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-09_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-09_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-09_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-09_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-10_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-10_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-10_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-10_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-11_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-11_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-11_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-11_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-12_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-12_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-12_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-12_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-13_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-13_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-13_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-13_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-14_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-14_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-14_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-14_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-15_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-15_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-15_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-15_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-16_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-16_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-16_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-16_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-17_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-17_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-17_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-17_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-18_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-18_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-18_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-18_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-19_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-19_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-19_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-19_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-20_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-20_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-20_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-20_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-21_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-21_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-21_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-21_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-22_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-22_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-22_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-22_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-23_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-23_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-23_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-23_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-24_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-24_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-24_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-24_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-25_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-25_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-25_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-25_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-26_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-26_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-26_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-26_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-27_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-27_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-27_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-27_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-28_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-28_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-28_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-28_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-29_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-29_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-29_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-29_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-30_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-30_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-30_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-30_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-31_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-31_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-31_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-05-31_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-01_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-01_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-01_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-01_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-02_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-02_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-02_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-02_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-03_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-03_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-03_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-03_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-04_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-04_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-04_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-04_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-05_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-05_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-05_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-05_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-06_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-06_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-06_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-06_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-07_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-07_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-07_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-07_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-08_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-08_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-08_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-08_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-09_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-09_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-09_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-09_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-10_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-10_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-10_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-10_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-11_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-11_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-11_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-11_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-12_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-12_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-12_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-12_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-13_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-13_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-13_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-13_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-14_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-14_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-14_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-14_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-15_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-15_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-15_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-15_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-16_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-16_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-16_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-16_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-17_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-17_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-17_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-17_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-18_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-18_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-18_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-18_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-19_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-19_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-19_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-19_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-20_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-20_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-20_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-20_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-21_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-21_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-21_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-21_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-22_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-22_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-22_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-22_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-23_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-23_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-23_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-23_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-24_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-24_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-24_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-24_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-25_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-25_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-25_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-25_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-26_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-26_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-26_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-26_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-27_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-27_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-27_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-27_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-28_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-28_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-28_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-28_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-29_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-29_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-29_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-29_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-30_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-30_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-30_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-06-30_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-01_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-01_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-01_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-01_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-02_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-02_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-02_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-02_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-03_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-03_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-03_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-03_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-04_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-04_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-04_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-04_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-05_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-05_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-05_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-05_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-06_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-06_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-06_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-06_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-07_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-07_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-07_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-07_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-08_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-08_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-08_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-08_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-09_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-09_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-09_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-09_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-10_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-10_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-10_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-10_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-11_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-11_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-11_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-11_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-12_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-12_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-12_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-12_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-13_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-13_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-13_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-13_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-14_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-14_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-14_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-14_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-15_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-15_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-15_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-15_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-16_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-16_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-16_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-16_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-17_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-17_06:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-17_12:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-17_18:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-18_00:00:00
+Downloaded ./downloaded_files/wrfout_d03_2023-07-18_06:00:00
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function to download files</span>
+<span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">local_dir</span><span class="p">):</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">local_dir</span><span class="p">,</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloaded </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># URL of the website to scrape</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://iop.archive.arm.gov/arm-iop-file/2021/guc/sail/xu-wrf/bsu_cfsr22/hourly/&quot;</span>
+
+<span class="c1"># Local directory to save files</span>
+<span class="n">local_dir</span> <span class="o">=</span> <span class="s2">&quot;./downloaded_files&quot;</span>
+
+<span class="c1"># Create directory if it doesn&#39;t exist</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">local_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">local_dir</span><span class="p">)</span>
+
+<span class="c1"># Send a GET request to the URL</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Parse the HTML content</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+<span class="c1"># Find all links in the page</span>
+<span class="n">links</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+
+<span class="c1"># Loop through all links and download files</span>
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+    <span class="n">href</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.nc&#39;</span><span class="p">):</span>  <span class="c1"># Change the extension according to the file type you want to download</span>
+        <span class="k">if</span> <span class="n">href</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;wrfhourly_d03_2022-01&quot;</span><span class="p">):</span>
+            <span class="n">file_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">href</span>
+            <span class="n">download_file</span><span class="p">(</span><span class="n">file_url</span><span class="p">,</span> <span class="n">local_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded ./downloaded_files/wrfhourly_d03_2022-01-01.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-02.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-03.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-04.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-05.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-06.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-07.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-08.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-09.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-10.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-11.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-12.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-13.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-14.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-15.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-16.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-17.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-18.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-19.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-20.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-21.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-22.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-23.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-24.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-25.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-26.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-27.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-28.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-29.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-30.nc
+Downloaded ./downloaded_files/wrfhourly_d03_2022-01-31.nc
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                  </article>
+
+                
+                
+
+                
+                
+                  <footer class="prev-next-footer">
+                    
+<div class="prev-next-area">
+</div>
+                  </footer>
+                
+              </div>
+
+              
+              
+                
+                  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+                
+              
+
+
+                
+                <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/wrfdwnl.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/cookbook-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/wrfdwnl.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/cookbook-template/issues/new?title=Issue%20on%20page%20%2Fnotebooks/wrfdwnl.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/wrfdwnl.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+            </div>
+
+            <footer class="bd-footer-content">
+              
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the <a href="https://projectpythia.org/">Project Pythia</a> Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 23 May 2024.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+            </footer>
+
+        </main>
+    </div>
+  </div>
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+     
+  
+  
+  
+  
+    <div class="footer-items__start">
+      <div class="container-fluid m-0 p-0">
+      
+        <div class="footer-item">
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div></div>
+      
+        <div class="footer-item">  <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2024.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 23 May 2024.
+        </p>
+      </div>
+    </div>
+  </div></div>
+      
+        <div class="footer-item"><div class="container-fluid footer-extra">
+  <div class="container">
+    <center>
+      Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
+      in Pythia Cookbooks is licensed under
+      <a href="https://opensource.org/license/apache-2-0">Apache 2.0</a>. All
+      other non-code content is licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/">
+        Creative Commons BY 4.0 (CC BY 4.0)</a
+      >.
+    </center>
+    <br /><br />
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="../_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div></div>
+      
+      </div>
+    </div>
+  
+
+  </footer>
+  </body>
+</html>
