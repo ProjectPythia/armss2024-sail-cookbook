@@ -1,4 +1,4 @@
-<img src="thumbnail.png" alt="thumbnail" width="300"/>
+<img src="notebooks/images/saillogo.png" alt="thumbnail" width="300"/>
 
 # SAIL Cookbook: Aerosol influence on ground snow properties during SAIL
 
