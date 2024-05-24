@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Project Pythia Cookbook Template</title>
+    <title>Surface temperature comparison &#8212; Project Pythia Cookbook Template</title>
   
   
   
@@ -220,10 +220,6 @@
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
 </div>
 
     </header>
@@ -368,11 +364,12 @@
 <li class="toctree-l1"><a class="reference internal" href="dust_analysis_with_lidar.html">Dust layer observations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyze associated environmental conditions</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="aop-spa2.html">Aeorosl Optical Properties from the SAIL Campaign</a></li>
 
 
 
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Surface temperature comparison</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OPC.html">Total particle counts from OPC</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../SMPS.html">Size dsitributions from SMPS distributions</a></li>
 </ul>
@@ -421,7 +418,9 @@
 <div id="searchbox"></div>
                   <article class="bd-article">
                     
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="surface-temperature-comparison">
+<h1>Surface temperature comparison<a class="headerlink" href="#surface-temperature-comparison" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">act</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1483,8 +1482,8 @@ if (window.Jupyter !== undefined) {
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set your username and token here!</span>
-<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;mqzhang&#39;</span>
-<span class="n">token</span> <span class="o">=</span> <span class="s1">&#39;a0347c89b0b0ea3&#39;</span>
+<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;---------&#39;</span>
+<span class="n">token</span> <span class="o">=</span> <span class="s1">&#39;##########&#39;</span>
 
 <span class="c1"># Set the datastream and start/enddates</span>
 <span class="n">datastream_snow</span> <span class="o">=</span> <span class="s1">&#39;gucmetM1.b1&#39;</span> <span class="c1"># snow depth, also precipitation rate</span>
@@ -5212,12 +5211,12 @@ Coordinates:
 
 <span class="c1"># Plot up the variable in the first plot - Surface precipitation corrected (tbrg_precip_total_corr)</span>
 <span class="n">display</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">variable_snow</span><span class="p">,</span> <span class="n">subplot_index</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,),</span><span class="n">day_night_background</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-             <span class="n">set_title</span><span class="o">=</span><span class="s2">&quot;Black carbon case: Total precipitation&quot;</span><span class="p">)</span>
+             <span class="n">set_title</span><span class="o">=</span><span class="s2">&quot;Control case: Total precipitation&quot;</span><span class="p">)</span>
 <span class="c1"># display.day_night_background(subplot_index=(0,))</span>
 
 <span class="c1"># Plot up the variable in the second plot - Temperature: temp_mean</span>
 <span class="n">display</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">variable_temp</span><span class="p">,</span> <span class="n">subplot_index</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,),</span><span class="n">day_night_background</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-             <span class="n">set_title</span><span class="o">=</span><span class="s2">&quot;Black carbon case: Surface Temperature&quot;</span><span class="p">)</span>
+             <span class="n">set_title</span><span class="o">=</span><span class="s2">&quot;Control case: Surface Temperature&quot;</span><span class="p">)</span>
 <span class="c1"># display.day_night_background(subplot_index=(1,))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;(K)&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
@@ -5225,7 +5224,7 @@ Coordinates:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a046ad34528b40e6e04eb251bd3b544ddb1e228d8c4bf2fc749dce6f4cc268eb.png" src="../_images/a046ad34528b40e6e04eb251bd3b544ddb1e228d8c4bf2fc749dce6f4cc268eb.png" />
+<img alt="../_images/6ad21ea0c6e1a1a121859540f8e4331282aa226d95b120e062a294a0c65608be.png" src="../_images/6ad21ea0c6e1a1a121859540f8e4331282aa226d95b120e062a294a0c65608be.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -50608,6 +50607,7 @@ Datum: unknown
   }
 })(window);</script></div></div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -50665,20 +50665,7 @@ Datum: unknown
               
               
                 
-                  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
+                  <div class="bd-sidebar-secondary bd-toc"></div>
                 
               
 
@@ -50880,9 +50867,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
