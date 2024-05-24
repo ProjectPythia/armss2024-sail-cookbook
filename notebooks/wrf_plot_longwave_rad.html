@@ -490,6 +490,27 @@
 <img alt="../_images/3e8c1161b5727fe501d7d0b3427ffe3951b53dd9ce1c0e9de763ac26c96aa38c.png" src="../_images/3e8c1161b5727fe501d7d0b3427ffe3951b53dd9ce1c0e9de763ac26c96aa38c.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot time series of downward LW radiation for Jan 26</span>
+<span class="n">dataset_26</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="s1">&#39;wrf_data/jan_2022/wrfhourly_d03_2022-01-26.nc&#39;</span><span class="p">)</span>
+<span class="n">time_series</span> <span class="o">=</span> <span class="n">dataset_26</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;south_north&quot;</span><span class="p">)</span>
+<span class="n">time_series</span> <span class="o">=</span> <span class="n">time_series</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;west_east&quot;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">constrained_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">time_series</span><span class="o">.</span><span class="n">GLW</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;time series of LWR&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Downward LWR at surface / W$m^{-2}$&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Downward LWR at surface / W$m^{-2}$&#39;)
+</pre></div>
+</div>
+<img alt="../_images/ab0389976fce4b2f3c6b2f698a78395e00e6d963fb6435e6fab763128112f614.png" src="../_images/ab0389976fce4b2f3c6b2f698a78395e00e6d963fb6435e6fab763128112f614.png" />
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
