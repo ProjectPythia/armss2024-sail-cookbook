@@ -1,9 +1,28 @@
 format: jb-book
 root: README
 parts:
-  - caption: Preamble
+  - caption: Identify high-aerosol loading events
     chapters:
-      - file: notebooks/how-to-cite
-  - caption: Introduction
+      - file: notebooks/HYSPLIT_Joy.ipynb
+      - file: notebooks/dust_analysis_with_lidar.ipynb
+
+  - caption: Analyze associated environmental conditions 
     chapters:
-      - file: notebooks/notebook-template
+      - file: notebooks/aop-spa2.ipynb
+      - file: notebooks/snowdepthanalysis.ipynb
+      - file: OPC.ipynb
+      - file: SMPS.ipynb
+
+  - caption: Evaluating black carbon & dust concentrations  
+    chapters:
+      - file: notebooks/AJCSsailnotebook.ipynb
+
+  - caption: Longwave radiation variations  
+    chapters:
+      - file: notebooks/wrf_plot_longwave_rad.ipynb
+      - file: Radiometer.ipynb
+
+  - caption: Snow albedo changes in measurements and WRF simulations  
+    chapters:
+      - file: notebooks/sailradsnow.ipynb
+      - file: notebooks/sailradwrf.ipynb
