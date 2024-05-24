@@ -41,3 +41,5 @@ Our analysis utilizes SAIL data to observe changes in snow properties due to hig
 * **AOP PSAP** - aerosol optical properties (AAE, AE, SSA, Beta Abs, Beta Sca)
 * **Weather camera** - snow cover status
 
+## Summary
+We utilize the SAIL campaign measurements to perform a case study on three events including one control event and two high-aerosol loading events. In-situ measurements and back-trajectory model output are used to evaluate the number concentration and size distribution of aerosols and black carbon. Analysis of longwave radiation measurements indicates that there are high concentration of black carbon/aerosols in the atmosphere. Snow albedo decreases have been observed in the two high-aerosol loading events. Meanwhile, WRF simulations do not capture such decreases in surface albedo. Since WRF simulations used in this project do not incorporate aerosols, we expect aerosols, along with other factors, can contribute to such discrepancy between measurements and WRF simulations in terms of the snow darkening effect of aerosols/black carbon.  
