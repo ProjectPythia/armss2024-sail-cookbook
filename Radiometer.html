@@ -6305,8 +6305,8 @@ cnf29 = 650.0  712.0        * minimum and default station pressure to use for Ra
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wf_rad</span> <span class="o">=</span> <span class="n">rad</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2022-01-26T06:30:00&#39;</span><span class="p">,</span><span class="s1">&#39;2022-01-27T00:00:00&#39;</span><span class="p">))</span>
 <span class="n">bkg_rad</span> <span class="o">=</span> <span class="n">rad</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2022-01-03T00:00:00&#39;</span><span class="p">,</span><span class="s1">&#39;2022-01-04T00:00:00&#39;</span><span class="p">))</span>
 <span class="n">dust_rad</span> <span class="o">=</span> <span class="n">rad</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2023-04-06T00:00:00&#39;</span><span class="p">,</span><span class="s1">&#39;2023-04-07T00:00:00&#39;</span><span class="p">))</span>
-<span class="n">dust_rad</span><span class="o">.</span><span class="n">down_long_hemisp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">dust_rad</span><span class="o">.</span><span class="n">up_long_hemisp</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="c1"># dust_rad.down_long_hemisp.plot()</span>
+<span class="c1"># dust_rad.up_long_hemisp.plot()</span>
 <span class="n">fig</span><span class="p">,(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span><span class="n">layout</span><span class="o">=</span><span class="s1">&#39;constrained&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">supylabel</span><span class="p">(</span><span class="s1">&#39;Downwelling IR Rad. / Upwelling IR Rad.&#39;</span><span class="p">)</span>
@@ -6321,7 +6321,6 @@ cnf29 = 650.0  712.0        * minimum and default station pressure to use for Ra
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.6, 0.9)
 </pre></div>
 </div>
-<img alt="_images/659070faf120c96223f9d1cf52e65400ebb269593f7942d021433a3bc6279d60.png" src="_images/659070faf120c96223f9d1cf52e65400ebb269593f7942d021433a3bc6279d60.png" />
 <img alt="_images/309b1d8e69f049d6055b716be70bd502cc8387f06bfba47ba6d1068191d5739a.png" src="_images/309b1d8e69f049d6055b716be70bd502cc8387f06bfba47ba6d1068191d5739a.png" />
 </div>
 </div>
