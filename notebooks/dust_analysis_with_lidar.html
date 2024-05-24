@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dust layer observations here &#8212; Project Pythia Cookbook Template</title>
+    <title>Dust layer observations &#8212; Project Pythia Cookbook Template</title>
   
   
   
@@ -361,7 +361,7 @@
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dust layer observations here</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dust layer observations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyze associated environmental conditions</span></p>
 <ul class="nav bd-sidenav">
@@ -440,99 +440,8 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>act.discovery.download_arm_data<span class="o">?</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>
-act<span class=" -Color -Color-Blue">.</span>discovery<span class=" -Color -Color-Blue">.</span>download_arm_data<span class=" -Color -Color-Blue">(</span>
-    username<span class=" -Color -Color-Blue">,</span>
-    token<span class=" -Color -Color-Blue">,</span>
-    datastream<span class=" -Color -Color-Blue">,</span>
-    startdate<span class=" -Color -Color-Blue">,</span>
-    enddate<span class=" -Color -Color-Blue">,</span>
-    time<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-    output<span class=" -Color -Color-Blue">=</span><span class=" -Color -Color-Green">None</span><span class=" -Color -Color-Blue">,</span>
-<span class=" -Color -Color-Blue">)</span>
-<span class=" -Color -Color-Red">Docstring:</span>
-This tool will help users utilize the ARM Live Data Webservice to download
-ARM data.
-
-Parameters
-----------
-username : str
-    The username to use for logging into the ADC archive.
-token : str
-    The access token for accessing the ADC archive.
-datastream : str
-    The name of the datastream to acquire.
-startdate : str
-    The start date of the data to acquire. Formats accepted are
-    YYYY-MM-DD, DD.MM.YYYY, DD/MM/YYYY, YYYYMMDD, YYYY/MM/DD or
-    any of the previous formats with THH:MM:SS added onto the end
-    (ex. 2020-09-15T12:00:00).
-enddate : str
-    The end date of the data to acquire. Formats accepted are
-    YYYY-MM-DD, DD.MM.YYYY, DD/MM/YYYY, YYYYMMDD or YYYY/MM/DD, or
-    any of the previous formats with THH:MM:SS added onto the end
-    (ex. 2020-09-15T13:00:00).
-time: str or None
-    The specific time. Format is HHMMSS. Set to None to download all files
-    in the given date interval.
-output : str
-    The output directory for the data. Set to None to make a folder in the
-    current working directory with the same name as *datastream* to place
-    the files in.
-
-Returns
--------
-files : list
-    Returns list of files retrieved
-
-Notes
------
-This programmatic interface allows users to query and automate
-machine-to-machine downloads of ARM data. This tool uses a REST URL and
-specific parameters (saveData, query), user ID and access token, a
-datastream name, a start date, and an end date, and data files matching
-the criteria will be returned to the user and downloaded.
-
-By using this web service, users can setup cron jobs and automatically
-download data from /data/archive into their workspace. This will also
-eliminate the manual step of following a link in an email to download data.
-All other data files, which are not on the spinning
-disk (on HPSS), will have to go through the regular ordering process.
-More information about this REST API and tools can be found on `ARM Live
-&lt;https://adc.arm.gov/armlive/#scripts&gt;`_.
-
-To login/register for an access token click `here
-&lt;https://adc.arm.gov/armlive/livedata/home&gt;`_.
-
-Author: Michael Giansiracusa
-Email: giansiracumt@ornl.gov
-
-Examples
---------
-This code will download the netCDF files from the sgpmetE13.b1 datastream
-and place them in a directory named sgpmetE13.b1. The data from 14 Jan to
-20 Jan 2017 will be downloaded. Replace *userName* and *XXXXXXXXXXXXXXXX*
-with your username and token for ARM Data Discovery. See the Notes for
-information on how to obtain a username and token.
-
-.. code-block:: python
-
-    act.discovery.download_data(
-        &quot;userName&quot;, &quot;XXXXXXXXXXXXXXXX&quot;, &quot;sgpmetE13.b1&quot;, &quot;2017-01-14&quot;, &quot;2017-01-20&quot;
-    )
-<span class=" -Color -Color-Red">File:</span>      /opt/conda/lib/python3.11/site-packages/act/discovery/arm.py
-<span class=" -Color -Color-Red">Type:</span>      function
-</pre></div>
-</div>
-</div>
-</div>
+<section class="tex2jax_ignore mathjax_ignore" id="dust-layer-observations">
+<h1>Dust layer observations<a class="headerlink" href="#dust-layer-observations" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### April 3rd, 2022 ###</span>
@@ -599,8 +508,6 @@ Measurement (ARM) User Facility. https://doi.org/10.5439/1462207
 <img alt="../_images/4e6dcb33b6e008d4e85cc8db05305a8aa85540e9c0d9262e88d9a3f645ee20cc.png" src="../_images/4e6dcb33b6e008d4e85cc8db05305a8aa85540e9c0d9262e88d9a3f645ee20cc.png" />
 </div>
 </div>
-<section id="dust-layer-observations-here">
-<h1>Dust layer observations here<a class="headerlink" href="#dust-layer-observations-here" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### April 4rd, 2022 ###</span>
