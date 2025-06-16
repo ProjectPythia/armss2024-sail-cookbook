@@ -1,0 +1,1352 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Total particle counts from OPC &#8212; Project Pythia Cookbook Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=d0efeab3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-T52X8HNYE8"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-T52X8HNYE8');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-T52X8HNYE8');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'OPC';</script>
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Size dsitributions from SMPS distributions" href="SMPS.html" />
+    <link rel="prev" title="Surface temperature comparison" href="notebooks/snowdepthanalysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="16 June 2025"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div class="pst-scroll-pixel-helper"></div>
+    <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+     
+  
+
+<a class="navbar-brand logo" href="https://projectpythia.org">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pythia_logo-white-rtext.svg" class="logo__image only-light" alt="Project Pythia Cookbook Template - Home"/>
+    <script>document.write(`<img src="_static/pythia_logo-white-rtext.svg" class="logo__image only-dark" alt="Project Pythia Cookbook Template - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+        
+        
+        
+        <div class="bd-sidebar-primary bd-sidebar">
+          
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org">Home</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://foundations.projectpythia.org">Foundations</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://cookbooks.projectpythia.org">Cookbooks</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/resource-gallery.html">Resources</a>
+  </li>
+  
+  <li class="nav-item">
+    
+    
+    
+    <a class="nav-link nav-internal" href="https://projectpythia.org/index.html#join-us">Community</a>
+  </li>
+  
+  
+</ul></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ProjectPythia" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/project_pythia" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw" title="YouTube" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-youtube-square fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="README.html">
+                    SAIL Cookbook: Aerosol influence on ground snow properties during SAIL
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Identify high-aerosol loading events</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/HYSPLIT_Joy.html">Source determination through NOAA HYSPLIT trajectory model</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="notebooks/dust_analysis_with_lidar.html">Dust layer observations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Analyze associated environmental conditions</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/aop-spa2.html">Aeorosl Optical Properties from the SAIL Campaign</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="notebooks/snowdepthanalysis.html">Surface temperature comparison</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Total particle counts from OPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SMPS.html">Size dsitributions from SMPS distributions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Evaluating black carbon &amp; dust concentrations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/AJCSsailnotebook.html">SP2 Plots For SAIL events</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Longwave radiation variations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/wrf_plot_longwave_rad.html">Plot downward longwave (LW) radiation at surface for WRF Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Radiometer.html">Longwave IR Radiation Ratios</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Snow albedo changes in measurements and WRF simulations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/sailradsnow.html">Surface albedo measurements</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="notebooks/sailradwrf.html">Explore WRF simulations of the surface albedo</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+        </div>
+
+        
+        <main id="main-content" class="bd-main" role="main">
+          
+
+            <div class="bd-content">
+
+              <div class="bd-article-container">
+
+                
+                  
+                  
+<div id="searchbox"></div>
+                  <article class="bd-article">
+                    
+  <section id="total-particle-counts-from-opc">
+<h1>Total particle counts from OPC<a class="headerlink" href="#total-particle-counts-from-opc" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">act</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;rppoland18&#39;</span>
+<span class="n">token</span> <span class="o">=</span> <span class="s1">&#39;3127641b73e77c24&#39;</span>
+<span class="n">datastream</span> <span class="o">=</span> <span class="s1">&#39;gucaosopcS2.b1&#39;</span>
+<span class="n">startdate</span> <span class="o">=</span> <span class="s1">&#39;2021-10-27&#39;</span>
+<span class="n">enddate</span> <span class="o">=</span> <span class="s1">&#39;2023-06-16&#39;</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">discovery</span><span class="o">.</span><span class="n">download_arm_data</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">datastream</span><span class="p">,</span> <span class="n">startdate</span><span class="p">,</span> <span class="n">enddate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[DOWNLOADING] gucaosopcS2.b1.20221203.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221204.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20221206.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221205.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20230416.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221202.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20230613.042214.nc
+[DOWNLOADING] gucaosopcS2.b1.20221201.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221201.192954.nc
+[DOWNLOADING] gucaosopcS2.b1.20230211.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20230614.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20230415.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20230615.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221206.034912.nc
+[DOWNLOADING] gucaosopcS2.b1.20221207.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221209.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221105.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221104.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221108.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221026.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221105.050917.nc
+[DOWNLOADING] gucaosopcS2.b1.20221105.202509.nc
+[DOWNLOADING] gucaosopcS2.b1.20221105.211645.nc
+[DOWNLOADING] gucaosopcS2.b1.20221105.200941.nc
+[DOWNLOADING] gucaosopcS2.b1.20221107.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221105.204541.nc
+[DOWNLOADING] gucaosopcS2.b1.20221105.210115.nc
+[DOWNLOADING] gucaosopcS2.b1.20221027.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221028.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221028.173923.nc
+[DOWNLOADING] gucaosopcS2.b1.20221106.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221101.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221015.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221008.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221002.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221002.193524.nc
+[DOWNLOADING] gucaosopcS2.b1.20221002.180951.nc
+[DOWNLOADING] gucaosopcS2.b1.20220926.142423.nc
+[DOWNLOADING] gucaosopcS2.b1.20220926.150300.nc
+[DOWNLOADING] gucaosopcS2.b1.20220926.172232.nc
+[DOWNLOADING] gucaosopcS2.b1.20220926.175429.nc
+[DOWNLOADING] gucaosopcS2.b1.20220926.181730.nc
+[DOWNLOADING] gucaosopcS2.b1.20220926.183147.nc
+[DOWNLOADING] gucaosopcS2.b1.20220926.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221003.152936.nc
+[DOWNLOADING] gucaosopcS2.b1.20221003.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221004.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221016.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220927.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221018.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221004.081236.nc
+[DOWNLOADING] gucaosopcS2.b1.20220928.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221019.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221005.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220929.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221006.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221009.183950.nc
+[DOWNLOADING] gucaosopcS2.b1.20221009.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221009.185520.nc
+[DOWNLOADING] gucaosopcS2.b1.20221017.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20221012.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221011.174931.nc
+[DOWNLOADING] gucaosopcS2.b1.20221011.175848.nc
+[DOWNLOADING] gucaosopcS2.b1.20221011.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221020.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221013.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220930.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221022.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221021.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221029.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221030.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20221023.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20221102.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221212.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221213.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221103.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221024.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221025.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221031.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220830.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220919.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220905.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220903.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220907.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220906.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220913.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20230212.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20230420.131100.nc
+[DOWNLOADING] gucaosopcS2.b1.20230420.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220915.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220908.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220918.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220909.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220923.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220916.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220910.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220922.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220911.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220921.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220912.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220914.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220917.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20221014.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220924.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221001.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220925.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220815.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220815.201838.nc
+[DOWNLOADING] gucaosopcS2.b1.20220816.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220817.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220818.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220819.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220820.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220821.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220822.161025.nc
+[DOWNLOADING] gucaosopcS2.b1.20220824.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220826.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220822.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220823.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220825.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220828.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220827.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220829.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221211.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221211.200710.nc
+[DOWNLOADING] gucaosopcS2.b1.20220901.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220902.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220904.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220920.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221210.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221208.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20230417.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20230418.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20230213.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20230421.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20230214.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20230422.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221007.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20221010.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220923.201402.nc
+[DOWNLOADING] gucaosopcS2.b1.20221126.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20230205.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20230206.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20230201.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20230131.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20221117.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20221117.141602.nc
+[DOWNLOADING] gucaosopcS2.b1.20220317.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220225.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220515.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211210.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220516.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220226.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220531.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220407.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220403.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220110.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220628.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220607.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220316.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220530.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220517.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220608.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220429.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211124.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211103.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220318.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211030.172710.nc
+[DOWNLOADING] gucaosopcS2.b1.20211029.235116.nc
+[DOWNLOADING] gucaosopcS2.b1.20211217.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220404.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20211108.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220423.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220223.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220208.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220224.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211104.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220201.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220609.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220406.183844.nc
+[DOWNLOADING] gucaosopcS2.b1.20220405.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211030.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220315.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220406.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211102.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211106.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220623.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220603.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211031.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220512.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220111.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220629.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220511.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211128.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220206.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220330.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220408.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220117.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220227.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211212.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220510.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220207.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211216.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220624.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220422.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220604.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220124.201240.nc
+[DOWNLOADING] gucaosopcS2.b1.20211211.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211213.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220602.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20211123.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220409.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211129.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211029.220910.nc
+[DOWNLOADING] gucaosopcS2.b1.20220119.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220310.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211120.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220601.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211215.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220513.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220622.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220621.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220519.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220427.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220625.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211108.173339.nc
+[DOWNLOADING] gucaosopcS2.b1.20220314.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211122.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220118.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211108.174411.nc
+[DOWNLOADING] gucaosopcS2.b1.20220228.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211121.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220116.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220222.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220209.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220130.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211109.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220626.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220221.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211230.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20211027.175606.nc
+[DOWNLOADING] gucaosopcS2.b1.20211214.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220131.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211107.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220312.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220518.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220220.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220224.202705.nc
+[DOWNLOADING] gucaosopcS2.b1.20220311.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220514.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220203.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220114.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220402.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211219.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220606.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220605.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220112.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220205.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220424.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211127.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220313.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220113.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220319.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211231.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220426.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20211113.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220509.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220627.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220331.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220620.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220202.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220420.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211029.170004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220428.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211218.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220115.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220421.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220425.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211125.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220204.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211126.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220401.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211101.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220308.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220619.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220506.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220520.171832.nc
+[DOWNLOADING] gucaosopcS2.b1.20220701.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220217.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220508.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220702.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211112.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220301.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220618.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220616.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211118.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220304.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220328.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220307.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220324.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220101.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220216.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220521.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220102.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220419.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220415.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211122.200003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211209.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220128.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220210.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211222.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220306.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211225.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211223.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220219.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220529.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220211.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220106.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220129.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220105.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220212.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211221.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211115.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220120.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220614.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211028.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220214.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220505.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220303.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220327.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211228.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220305.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220309.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211201.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220527.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220617.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220329.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220107.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220124.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220507.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211224.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220410.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220418.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220526.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20211027.172924.nc
+[DOWNLOADING] gucaosopcS2.b1.20211207.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220215.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220525.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220325.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220416.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220326.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220318.194928.nc
+[DOWNLOADING] gucaosopcS2.b1.20220607.141421.nc
+[DOWNLOADING] gucaosopcS2.b1.20211226.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220610.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220123.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211029.000116.nc
+[DOWNLOADING] gucaosopcS2.b1.20211119.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220524.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220503.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220501.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211110.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211130.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211208.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220608.221342.nc
+[DOWNLOADING] gucaosopcS2.b1.20220413.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220615.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220430.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220704.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20211204.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20211220.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211028.232829.nc
+[DOWNLOADING] gucaosopcS2.b1.20220612.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220322.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220429.212210.nc
+[DOWNLOADING] gucaosopcS2.b1.20220417.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220502.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220611.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220323.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211114.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220504.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220302.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220108.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20211229.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220213.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211227.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220121.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220522.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211203.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220126.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220109.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220414.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211117.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220411.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211202.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20211205.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220520.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211116.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220412.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220104.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20211111.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220218.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220528.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211109.194049.nc
+[DOWNLOADING] gucaosopcS2.b1.20220321.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220630.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20220122.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220320.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220703.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220125.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20220427.160703.nc
+[DOWNLOADING] gucaosopcS2.b1.20220127.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20220613.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220523.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20220706.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20211206.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20220705.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20220103.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20211105.173332.nc
+[DOWNLOADING] gucaosopcS2.b1.20220831.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20230419.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20230217.034637.nc
+[DOWNLOADING] gucaosopcS2.b1.20230222.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20230223.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20230223.211653.nc
+[DOWNLOADING] gucaosopcS2.b1.20230218.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20230425.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20221213.051014.nc
+[DOWNLOADING] gucaosopcS2.b1.20230216.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20230217.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20230219.000005.nc
+[DOWNLOADING] gucaosopcS2.b1.20230427.181449.nc
+[DOWNLOADING] gucaosopcS2.b1.20230427.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20230220.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20230221.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20230426.000000.nc
+[DOWNLOADING] gucaosopcS2.b1.20230424.000001.nc
+[DOWNLOADING] gucaosopcS2.b1.20230424.210458.nc
+[DOWNLOADING] gucaosopcS2.b1.20221215.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221216.000004.nc
+[DOWNLOADING] gucaosopcS2.b1.20230227.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20230226.000002.nc
+[DOWNLOADING] gucaosopcS2.b1.20230228.000003.nc
+[DOWNLOADING] gucaosopcS2.b1.20221109.000002.nc
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">opc</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_arm_netcdf</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">opc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt; Size: 11GB
+Dimensions:                      (time: 8504925, bound: 2, diameter_midpoint: 31)
+Coordinates:
+  * time                         (time) datetime64[ns] 68MB 2021-10-27T17:29:...
+  * diameter_midpoint            (diameter_midpoint) float32 124B 0.2746 ... ...
+Dimensions without coordinates: bound
+Data variables: (12/36)
+    base_time                    (time) datetime64[ns] 68MB 2021-10-27 ... 20...
+    time_offset                  (time) datetime64[ns] 68MB 2021-10-27T17:29:...
+    time_bounds                  (time, bound) object 136MB dask.array&lt;chunksize=(105, 2), meta=np.ndarray&gt;
+    diameter_midpoint_bounds     (time, diameter_midpoint, bound) float32 2GB dask.array&lt;chunksize=(105, 31, 2), meta=np.ndarray&gt;
+    gravimetric_factor           (time) float32 34MB dask.array&lt;chunksize=(105,), meta=np.ndarray&gt;
+    error_code                   (time) float64 68MB dask.array&lt;chunksize=(105,), meta=np.ndarray&gt;
+    ...                           ...
+    zero_count_dark              (time) float32 34MB 0.0 0.0 0.0 ... 0.0 0.0 0.0
+    low_laser_current            (time) float32 34MB 61.0 61.0 ... 64.0 64.0
+    high_laser_current           (time) float32 34MB 130.0 130.0 ... 132.0 132.0
+    lat                          (time) float32 34MB 38.9 38.9 ... 38.9 38.9
+    lon                          (time) float32 34MB -106.9 -106.9 ... -106.9
+    alt                          (time) float32 34MB 3.137e+03 ... 3.137e+03
+Attributes: (12/19)
+    command_line:          aosopccorr -s guc -f S2 -b 20211027 -e 20220821 -RD
+    Conventions:           ARM-1.3
+    process_version:       ingest-aosopccorr-1.1-0.el7
+    dod_version:           aosopc-b1-1.1
+    input_source:          /data/reproc/D221021.5/collection/guc/gucaosopcS2....
+    site_id:               guc
+    ...                    ...
+    doi:                   10.5439/1824224
+    history:               created by user paul on machine prod-proc5.adc.arm...
+    _file_dates:           [&#39;20211027&#39;, &#39;20211027&#39;, &#39;20211028&#39;, &#39;20211028&#39;, &#39;...
+    _file_times:           [&#39;172924&#39;, &#39;175606&#39;, &#39;000000&#39;, &#39;232829&#39;, &#39;000116&#39;,...
+    _datastream:           gucaosopcS2.b1
+    _arm_standards_flag:   1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># OPC counts for days of interest</span>
+<span class="n">wf_N</span> <span class="o">=</span> <span class="n">opc</span><span class="o">.</span><span class="n">total_N_conc</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2022-01-25T00:00:00.000000000&#39;</span><span class="p">,</span><span class="s1">&#39;2022-01-29T00:00:00.000000000&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">dust_N</span> <span class="o">=</span> <span class="n">opc</span><span class="o">.</span><span class="n">total_N_conc</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2023-04-04T00:00:00.000000000&#39;</span><span class="p">,</span><span class="s1">&#39;2023-04-06T00:00:00.000000000&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">bkg_N</span> <span class="o">=</span> <span class="n">opc</span><span class="o">.</span><span class="n">total_N_conc</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2022-01-03T00:00:00.000000000&#39;</span><span class="p">,</span><span class="s1">&#39;2022-01-07T00:00:00.000000000&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span> 
+
+<span class="c1"># Now compare the total concentrations across these events</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;background&#39;</span><span class="p">,</span><span class="s1">&#39;wildfire&#39;</span><span class="p">,</span><span class="s1">&#39;dust&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">bkg_N</span><span class="p">,</span><span class="n">wf_N</span><span class="p">,</span><span class="n">dust_N</span><span class="p">]</span>
+<span class="n">bar_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">bar_colors</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Particle Count cm^-3&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Total concentration 0-33 um (OPC)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Total concentration 0-33 um (OPC)&#39;)
+</pre></div>
+</div>
+<img alt="_images/111f77ab4dee120c65c29b333f7e40fcb83372740479b77a44547cc7c889c52a.png" src="_images/111f77ab4dee120c65c29b333f7e40fcb83372740479b77a44547cc7c889c52a.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                  </article>
+
+                
+                
+
+                
+                
+                  <footer class="prev-next-footer">
+                    
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notebooks/snowdepthanalysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Surface temperature comparison</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="SMPS.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Size dsitributions from SMPS distributions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                  </footer>
+                
+              </div>
+
+              
+              
+                
+              
+
+
+                
+                <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/OPC.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/cookbook-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/cookbook-template/edit/main/OPC.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/cookbook-template/issues/new?title=Issue%20on%20page%20%2FOPC.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/OPC.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+            </div>
+
+            <footer class="bd-footer-content">
+              
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the <a href="https://projectpythia.org/">Project Pythia</a> Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 16 June 2025.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+            </footer>
+
+        </main>
+    </div>
+  </div>
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+     
+  
+  
+  
+  
+    <div class="footer-items__start">
+      <div class="container-fluid m-0 p-0">
+      
+        <div class="footer-item">
+  <div class="container-fluid footer-logos">
+    <div class="container-xl">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="NCAR" src="_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="Unidata" src="_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+        </div>
+        <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
+          <img alt="UAlbany" src="_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+        </div>
+      </div>
+    </div>
+  </div></div>
+      
+        <div class="footer-item">  <div class="container-fluid footer-info">
+    <div class="container-xl">
+      <div class="d-flex justify-content-center">
+        <p class="py-1 m-0">
+            &copy;&nbsp;2024.
+        
+          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+        
+          Last updated on 16 June 2025.
+        </p>
+      </div>
+    </div>
+  </div></div>
+      
+        <div class="footer-item"><div class="container-fluid footer-extra">
+  <div class="container">
+    <center>
+      Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
+      in Pythia Cookbooks is licensed under
+      <a href="https://opensource.org/license/apache-2-0">Apache 2.0</a>. All
+      other non-code content is licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/">
+        Creative Commons BY 4.0 (CC BY 4.0)</a
+      >.
+    </center>
+    <br /><br />
+    <div class="row">
+      <p class="m-0">
+        <img
+          src="_static/footer-logo-nsf.png"
+          style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+        />
+        This material is based upon work supported by the National Science
+        Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those
+        of the author(s) and do not necessarily reflect the views of the
+        National Science Foundation.
+      </p>
+    </div>
+  </div>
+</div></div>
+      
+      </div>
+    </div>
+  
+
+  </footer>
+  </body>
+</html>
