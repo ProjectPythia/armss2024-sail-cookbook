@@ -1,1 +1,1 @@
-import{a}from"/armss2024-sail-cookbook/build/_shared/chunk-CTZYZH4P.js";import"/armss2024-sail-cookbook/build/_shared/chunk-3MZURCDM.js";import"/armss2024-sail-cookbook/build/_shared/chunk-2NH4LW52.js";export default a();
+import{a}from"/armss2024-sail-cookbook/_preview/23/build/_shared/chunk-CTZYZH4P.js";import"/armss2024-sail-cookbook/_preview/23/build/_shared/chunk-3MZURCDM.js";import"/armss2024-sail-cookbook/_preview/23/build/_shared/chunk-2NH4LW52.js";export default a();
