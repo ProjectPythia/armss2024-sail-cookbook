@@ -1,6 +1,6 @@
-<img src="notebooks/images/saillogo.png" alt="thumbnail" width="300"/>
-
 # SAIL Cookbook: Aerosol influence on ground snow properties during SAIL
+
+<img src="notebooks/images/saillogo.png" alt="thumbnail" width="300"/>
 
 ## Group Members
 Yan Xie, Zhenli Lai (Joy), Maiqi Zhang, Jessica Gasparik, Hayden Webb, Ryan Poland, Adrian Cortes
