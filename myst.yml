@@ -1,0 +1,41 @@
+version: 1
+extends:
+  - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
+project:
+  title: Armss2024-sail Cookbook
+  authors:
+    - name: Project Pythia Community
+      url: https://projectpythia.org/
+  github: https://github.com/projectpythia/armss2024-sail-cookbook
+  copyright: '2024'
+  toc:
+    - file: README.md
+    - title: Identify high-aerosol loading events
+      children:
+        - file: notebooks/HYSPLIT_Joy.ipynb
+        - file: notebooks/dust_analysis_with_lidar.ipynb
+    - title: Analyze associated environmental conditions
+      children:
+        - file: notebooks/aop-spa2.ipynb
+        - file: notebooks/snowdepthanalysis.ipynb
+        - file: OPC.ipynb
+        - file: SMPS.ipynb
+    - title: Evaluating black carbon & dust concentrations
+      children:
+        - file: notebooks/AJCSsailnotebook.ipynb
+    - title: Longwave radiation variations
+      children:
+        - file: notebooks/wrf_plot_longwave_rad.ipynb
+        - file: Radiometer.ipynb
+    - title: Snow albedo changes in measurements and WRF simulations
+      children:
+        - file: notebooks/sailradsnow.ipynb
+        - file: notebooks/sailradwrf.ipynb
+  jupyter:
+      binder:
+        repo: projectpythia/armss2024-sail-cookbook
+site:
+  options:
+    logo: notebooks/images/logos/pythia_logo-white-rtext.svg
+    folders: true
+  template: book-theme
