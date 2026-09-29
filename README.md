@@ -43,3 +43,7 @@ Our analysis utilizes SAIL data to observe changes in snow properties due to hig
 
 ## Summary
 We utilize the SAIL campaign measurements to perform a case study on three events including one control event and two high-aerosol loading events. In-situ measurements and back-trajectory model output are used to evaluate the number concentration and size distribution of aerosols and black carbon. Analysis of longwave radiation measurements further confirms that there are high concentration of black carbon/aerosols in the atmosphere. Snow albedo decreases have been observed in the two high-aerosol loading events. Meanwhile, WRF simulations do not capture such decreases in surface albedo. Since WRF simulations used in this project do not incorporate aerosols, we expect aerosols, along with other factors, can contribute to such discrepancy between measurements and WRF simulations in terms of the snow darkening effect of aerosols/black carbon.  
+
+## Citation and Credits
+
+Grover, Maxwell A., Scott Collis, Daniel Feldman, Ann Fridlind, Ya-Chien Feng, Michael Giansiracusa, Sujata Goswami, William I. Gustafson, Jr., Thijs Heus, Robert C. Jackson, Timothy W. Juliano, Lishan Li, Joseph R. O’Brien, and Damao Zhang. "Integrating High-Resolution Modeling with Diverse Field Campaign Observations through an Open Science Summer School". Bulletin of the American Meteorological Society (published online ahead of print 2024). https://doi.org/10.1175/BAMS-D-24-0270.1 Web.
