@@ -5,8 +5,8 @@
 ## Group Members
 Yan Xie, Zhenli Lai (Joy), Maiqi Zhang, Jessica Gasparik, Hayden Webb, Ryan Poland, Adrian Cortes
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
+[![nightly-build](https://github.com/cyschneck/armss2024-sail-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/cyschneck/armss2024-sail-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/cyschneck/armss2024-sail-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11282356.svg)](https://doi.org/10.5281/zenodo.11282356)
 
 The Colorado River provides water resources to the local community and ecosystems, 15 million jobs, and hydroelectric energy. However, the Colorado River has been under extreme stress with decreases in stream and river discharge in the basin. Many studies investigate reasons behind the changing in river conditions. On September 1, 2021 an ARM field campaign known as Surface Atmosphere Integrated Field Laboratory (SAIL) was launched to advance knowledge of atmospheric processes at high altitude terrain. The field campaign extended through June 15, 2023 with the ARM Mobile Facility (AMF2) deployed to Gunnison, CO. Measurements in precipitation, atmospheric thermodynamic state, aerosols and many more were collected over the period of study. 
