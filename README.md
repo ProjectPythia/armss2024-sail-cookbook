@@ -2,9 +2,6 @@
 
 <img src="notebooks/images/saillogo.png" alt="thumbnail" width="300"/>
 
-## Group Members
-Yan Xie, Zhenli Lai (Joy), Maiqi Zhang, Jessica Gasparik, Hayden Webb, Ryan Poland, Adrian Cortes
-
 [![nightly-build](https://github.com/cyschneck/armss2024-sail-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/cyschneck/armss2024-sail-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/cyschneck/armss2024-sail-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11282356.svg)](https://doi.org/10.5281/zenodo.11282356)
@@ -43,6 +40,15 @@ Our analysis utilizes SAIL data to observe changes in snow properties due to hig
 
 ## Summary
 We utilize the SAIL campaign measurements to perform a case study on three events including one control event and two high-aerosol loading events. In-situ measurements and back-trajectory model output are used to evaluate the number concentration and size distribution of aerosols and black carbon. Analysis of longwave radiation measurements further confirms that there are high concentration of black carbon/aerosols in the atmosphere. Snow albedo decreases have been observed in the two high-aerosol loading events. Meanwhile, WRF simulations do not capture such decreases in surface albedo. Since WRF simulations used in this project do not incorporate aerosols, we expect aerosols, along with other factors, can contribute to such discrepancy between measurements and WRF simulations in terms of the snow darkening effect of aerosols/black carbon.  
+
+## Authors
+Yan Xie, Zhenli Lai (Joy), Maiqi Zhang, Jessica Gasparik, Hayden Webb, Ryan Poland, Adrian Cortes
+
+### Contributors
+
+<a href="https://github.com/ProjectPythia/armss2024-sail-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/armss2024-sail-cookbook" />
+</a>
 
 ## Citation and Credits
 
