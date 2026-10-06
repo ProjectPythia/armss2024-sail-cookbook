@@ -38,6 +38,6 @@ authors:
     website: https://github.com/maiqiz
     affiliation: Washington University St. Louis, MO
   - name: "Cookbook Template contributors" # use the 'name' field to acknowledge organizations
-    website: "https://github.com/ProjectPythia/cookbook-template/graphs/contributors"
+    website: "https://github.com/cyschneck/armss2024-sail-cookbook/graphs/contributors"
 title: "Aerosol influence on ground snow properties during SAIl"
 abstract: "An investigation into the interaction of aerosol types and snow properties."

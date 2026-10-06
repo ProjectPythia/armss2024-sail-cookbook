@@ -2,11 +2,8 @@
 
 <img src="notebooks/images/saillogo.png" alt="thumbnail" width="300"/>
 
-## Group Members
-Yan Xie, Zhenli Lai (Joy), Maiqi Zhang, Jessica Gasparik, Hayden Webb, Ryan Poland, Adrian Cortes
-
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
+[![nightly-build](https://github.com/cyschneck/armss2024-sail-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/cyschneck/armss2024-sail-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/cyschneck/armss2024-sail-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11282356.svg)](https://doi.org/10.5281/zenodo.11282356)
 
 The Colorado River provides water resources to the local community and ecosystems, 15 million jobs, and hydroelectric energy. However, the Colorado River has been under extreme stress with decreases in stream and river discharge in the basin. Many studies investigate reasons behind the changing in river conditions. On September 1, 2021 an ARM field campaign known as Surface Atmosphere Integrated Field Laboratory (SAIL) was launched to advance knowledge of atmospheric processes at high altitude terrain. The field campaign extended through June 15, 2023 with the ARM Mobile Facility (AMF2) deployed to Gunnison, CO. Measurements in precipitation, atmospheric thermodynamic state, aerosols and many more were collected over the period of study. 
@@ -43,3 +40,16 @@ Our analysis utilizes SAIL data to observe changes in snow properties due to hig
 
 ## Summary
 We utilize the SAIL campaign measurements to perform a case study on three events including one control event and two high-aerosol loading events. In-situ measurements and back-trajectory model output are used to evaluate the number concentration and size distribution of aerosols and black carbon. Analysis of longwave radiation measurements further confirms that there are high concentration of black carbon/aerosols in the atmosphere. Snow albedo decreases have been observed in the two high-aerosol loading events. Meanwhile, WRF simulations do not capture such decreases in surface albedo. Since WRF simulations used in this project do not incorporate aerosols, we expect aerosols, along with other factors, can contribute to such discrepancy between measurements and WRF simulations in terms of the snow darkening effect of aerosols/black carbon.  
+
+## Authors
+Yan Xie, Zhenli Lai (Joy), Maiqi Zhang, Jessica Gasparik, Hayden Webb, Ryan Poland, Adrian Cortes
+
+### Contributors
+
+<a href="https://github.com/ProjectPythia/armss2024-sail-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/armss2024-sail-cookbook" />
+</a>
+
+## Citation and Credits
+
+Grover, Maxwell A., Scott Collis, Daniel Feldman, Ann Fridlind, Ya-Chien Feng, Michael Giansiracusa, Sujata Goswami, William I. Gustafson, Jr., Thijs Heus, Robert C. Jackson, Timothy W. Juliano, Lishan Li, Joseph R. O’Brien, and Damao Zhang. "Integrating High-Resolution Modeling with Diverse Field Campaign Observations through an Open Science Summer School". Bulletin of the American Meteorological Society (published online ahead of print 2024). https://doi.org/10.1175/BAMS-D-24-0270.1 Web.
